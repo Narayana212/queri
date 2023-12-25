@@ -58,7 +58,7 @@ export default function Home() {
               <div className='mt-16 flow-root sm:mt-24'>
                 <div className='-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
                   <Image
-                    src='/dashboard-preview.jpg'
+                    src='/chat.png'
                     alt='product preview'
                     width={1364}
                     height={866}
@@ -92,9 +92,6 @@ export default function Home() {
             <h2 className='mt-2 font-bold text-4xl text-gray-900 sm:text-5xl'>
               Start chatting in minutes
             </h2>
-            <LogoutLink>
-              Logout
-            </LogoutLink>
             <p className='mt-4 text-lg text-gray-600'>
               Chatting to your PDF files has never been
               easier than with Queri.
@@ -158,7 +155,7 @@ export default function Home() {
           <div className='mt-16 flow-root sm:mt-24'>
             <div className='-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
               <Image
-                src='/file-upload-preview.jpg'
+                src='/redirect.png'
                 alt='uploading preview'
                 width={1419}
                 height={732}
