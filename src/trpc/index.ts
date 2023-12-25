@@ -34,8 +34,6 @@ export const appRouter = router({
         data: {
           id: user.id,
           email: user.email
-
-
         }
       })
     }

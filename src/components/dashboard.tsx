@@ -7,8 +7,13 @@ import { Ghost, Loader2, MessageSquare, Plus, Trash } from "lucide-react";
 import Skeleton from "react-loading-skeleton";
 import Link from "next/link";
 import { format } from "date-fns";
+import { getUserSubscriptionPlan } from "@/lib/stripe";
 
-export default function Dashboard() {
+interface PageProps {
+  subscriptionPlan: Awaited<ReturnType<typeof getUserSubscriptionPlan>>
+}
+
+export default function Dashboard({subscriptionPlan}: PageProps) {
   const { data: files, isLoading } = trpc.getUserFiles.useQuery();
   const [currentlyDeletingFile, setCurrentlyDeletingFile] = useState<
     string | null
@@ -31,7 +36,7 @@ export default function Dashboard() {
       <div className="mt-8 flex flex-col md:flex-row   items-start justify-between gap-4">
         <h1 className="mb-3 font-bold text-5xl text-gray-900">My Files</h1>
 
-        <UploadButton />
+        <UploadButton  isSubscribed={subscriptionPlan.isSubscribed} />
       </div>
       {files && files?.length !== 0 ? (
         <ul className="mt-8 grid gird-cols-1 gap-6 divide-y divide-zinc-200 md:grid-cols-3">
