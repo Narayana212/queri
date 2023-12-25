@@ -87,6 +87,7 @@ const onUploadComplete = async ({
       (isSubscribed && isProExceeded) ||
       (!isSubscribed && isFreeExceeded)
     ) {
+
       await db.file.update({
         data: {
           uploadStatus: 'FAILED',
@@ -95,6 +96,7 @@ const onUploadComplete = async ({
           id: createdFile.id,
         },
       })
+    }
 
 
 
@@ -131,7 +133,9 @@ const onUploadComplete = async ({
           id: createdFile.id,
         },
       })
-    }
+
+
+    
   } catch (err) {
     console.log(err)
     await db.file.update({
