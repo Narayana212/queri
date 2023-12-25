@@ -21,12 +21,15 @@ interface UserAccountNavProps {
   imageUrl: string
 }
 
+
+
 const UserAccountNav = async ({
   email,
   imageUrl,
   name,
 }: UserAccountNavProps) => {
   const subscriptionPlan = await getUserSubscriptionPlan()
+ 
 
   return (
     <DropdownMenu>

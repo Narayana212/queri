@@ -4,7 +4,8 @@ import { get } from 'http'
 import React from 'react'
 
 export default async function BillingPage() {
-    const subscriptionPlan=getUserSubscriptionPlan()
+    const subscriptionPlan=await getUserSubscriptionPlan()
+    console.log(subscriptionPlan,"lp")
   return (
     <BillingForm subscriptionPlan={subscriptionPlan}/>
   )
