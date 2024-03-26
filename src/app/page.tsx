@@ -4,7 +4,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/max-width-wrapper";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/server";
-import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import { ContainerScroll } from "@/components/container-scroll-animation";
 
 export default function Home() {
   return (
